@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Budget Tracker</h1>
+    <div class="balance">
+      <h2>Total Balance: <span id="total-balance">₦0.00</span></h2>
+    </div>
+
+    <div class="add-entry">
+      <h3>Add Income/Expense</h3>
+      <input type="text" id="entry-description" placeholder="Description">
+      <input type="number" id="entry-amount" placeholder="Amount">
+      <select id="entry-type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <select id="entry-category">
+        <option value="Food">Food</option>
+        <option value="Rent">Rent</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Utilities">Utilities</option>
+        <option value="Other">Other</option>
+      </select>
+      <button id="add-entry-btn">Add Entry</button>
+    </div>
+
+    <div class="history">
+      <h3>Transaction History</h3>
+      <ul id="transaction-list"></ul>
+    </div>
+
+    <div class="chart-container">
+      <h3>Expense Breakdown</h3>
+      <canvas id="expense-chart"></canvas>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
